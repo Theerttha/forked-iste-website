@@ -32,7 +32,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "preview": "serve -s build -l 10000",
-    "postbuild": "ls -la && ls -la build"
     
   },
   "eslintConfig": {
