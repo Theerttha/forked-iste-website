@@ -1,6 +1,7 @@
 {
   "name": "iste",
   "version": "0.1.0",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@fontsource/ibm-plex-sans": "^4.5.13",
@@ -14,7 +15,7 @@
     "react-dynamic-swiper": "^2.0.2",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "react-snowfall": "^1.2.1",
@@ -32,7 +33,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "preview": "serve -s build -l 10000"
-    
   },
   "eslintConfig": {
     "extends": [
