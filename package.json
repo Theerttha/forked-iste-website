@@ -19,7 +19,6 @@
     "react-slick": "^0.29.0",
     "react-snowfall": "^1.2.1",
     "react-spring-3d-carousel": "^1.3.2",
-    "serve": "^14.2.4",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.4.5",
     "use-carousel": "0.0.2",
@@ -31,7 +30,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "preview": "serve -s build -l 10000",
+    "postbuild": "ls -la && ls -la build"
+    
   },
   "eslintConfig": {
     "extends": [
