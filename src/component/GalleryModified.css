@@ -1,0 +1,361 @@
+/* Main Container */
+.Maingallery {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  box-sizing: border-box;
+}
+
+/* Heading Styles */
+.galleryHeading {
+  font-family: 'Satoshi-Bold', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: rgb(48, 47, 53) 0.5rem 0.3rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  margin: 3rem auto;
+  border: 0.2rem solid;
+  width: min(80vw, 800px);
+  height: clamp(80px, 11vw, 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+/* CSS Custom Properties */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --c1: rgba(152, 13, 176, 0.996);
+  --c2: rgb(7, 226, 250);
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Timeline Vertical Line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--c1), var(--c2), var(--c1));
+  /*transform: translateX(-50%);*/
+  z-index: 1;
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+/* Timeline Content Wrapper */
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 1rem;
+}
+
+/* Left Side Items */
+.timeline-item.left .timeline-content {
+  margin-left: 0;
+  text-align: right;
+}
+
+/* Right Side Items */
+.timeline-item.right .timeline-content {
+  margin-left: 55%;
+  text-align: left;
+}
+
+/* Timeline Markers */
+.timeline-marker,.timeline-marker-active-left,.timeline-marker-active-right{
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, var(--c1), var(--c2));
+  border: 2px solid #000;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(152, 13, 176, 0.5);
+  animation: pulse 2s infinite;
+}
+.timeline-marker-active-left, .timeline-marker-active-right{
+  animation: grow 1s ease-in-out forwards;
+
+}
+
+.timeline-marker-active-left{
+  right:-14%;
+}
+.timeline-marker-active-right{
+  left: -13%;
+}
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2); /* Change to desired size */
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(152, 13, 176, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(152, 13, 176, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(152, 13, 176, 0.5);
+  }
+}
+
+/* Event Cards */
+.event-card {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(50, 50, 50, 0.8));
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(152, 13, 176, 0.2);
+  border: 1px solid rgba(152, 13, 176, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent, rgba(152, 13, 176, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(152, 13, 176, 0.4);
+}
+
+.event-card:hover::before {
+  opacity: 1;
+}
+
+/* Event Images */
+.event-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(0.9) saturate(1.1);
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.05);
+}
+
+/* Event Details */
+.event-details {
+  color: white;
+}
+
+.event-title {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  text-shadow: rgb(180, 2, 211) 0.2rem 0.1rem 1px;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.event-description {
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Event Meta Information */
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event-date,
+.event-state {
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
+  margin: 0;
+}
+
+.event-date {
+  color: rgb(209, 80, 232);
+  font-weight: 600;
+}
+
+.event-state {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.event-meta .icon {
+  margin-right: 0.5rem;
+  font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .timeline-container {
+    padding: 1rem;
+  }
+
+  .timeline-content {
+    width: 48%;
+  }
+  .timeline-marker-active-left{
+    right:-7%;
+  }
+  .timeline-marker-active-right{
+    left:-12%;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .Maingallery {
+    padding: 1rem;
+  }
+  
+  .timeline-line {
+    left: 30px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+    text-align: left !important;
+  }
+  
+  .timeline-marker {
+    left: 20px !important;
+    right: auto !important;
+  }
+  
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 60px;
+    text-align: left;
+  }
+
+
+  .event-card {
+    padding: 1rem;
+  }
+  
+  .event-image {
+    height: 150px;
+  }
+  
+  .event-meta {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .timeline-marker-active-left,.timeline-marker-active-right{
+    left:-55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-line {
+    left: 20px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 50px);
+    margin-left: 50px !important;
+  }
+  /*
+  .timeline-marker {
+    left: 10px !important;
+    width: 15px;
+    height: 15px;
+  }
+  */
+  .event-image {
+    height: 120px;
+  }
+  
+  .event-card {
+    padding: 0.8rem;
+  }
+  
+  .galleryHeading {
+    letter-spacing: 0.05em;
+  }
+  .timeline-marker-active-left,.timeline-marker-active-right{
+    left:-55px;
+  }
+}
+
+/* Fade in animation for intersection observer */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}

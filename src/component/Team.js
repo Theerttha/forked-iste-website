@@ -226,18 +226,19 @@ export default function Team() {
                 <h1 className="subHead">{member.role}</h1>
               </div>
               
-              <div className="imgNameDiv">
-                <div className="imgDiv">
-                  <img className="img1" src={member.image} alt={member.name} />
-                </div>
-                <div className="imgShade"></div>
-                <div className="detailsDiv">
-                  <h1 className="name">{member.name}</h1>
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                    <img className="linkedinIcon" src={linkedin} alt="LinkedIn" />
-                  </a>
-                </div>
+              <div className="memberCard">
+              <div className="imageContainer">
+                <img className="memberImage" src={member.image} alt={member.name} />
+                <div className="imageOverlay"></div>
               </div>
+              <div className="cardContent">
+                <h1 className="memberName">{member.name}</h1>
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedinLink">
+                  <img className="linkedinIcon" src={linkedin} alt="LinkedIn" />
+                </a>
+              </div>
+            </div>
+
             </div>
           ))}
         </div>
