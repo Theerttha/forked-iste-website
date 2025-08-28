@@ -1,0 +1,141 @@
+.achievements-section {
+  padding: 4vw 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+}
+
+.achievements-title {
+  color: white;
+  font-size: 4vw;
+  font-family: 'Satoshi-Bold';
+  text-shadow: rgb(209, 80, 232) 3px 1px 1px;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  max-width: 1000px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2vw;
+  padding: 2vw;
+  color: white;
+  gap: 2vw;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 1px 2px 0px rgba(225, 0, 255, 0.996),
+              1px 2px 4px 0px rgba(225, 0, 255, 0.996),
+              2px 4px 8px 0px rgba(0,255,255,0.7),
+              2px 4px 16px 0px rgba(225, 0, 255, 0.996);
+}
+
+.achievement-content {
+  flex: 1;
+  padding: 1vw;
+}
+
+.achievement-content h2 {
+  font-family: 'Satoshi-Bold';
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
+  text-shadow: rgb(209, 80, 232) 2px 1px 1px;
+}
+
+.achievement-content p {
+  font-family: 'Satoshi-Regular';
+  font-size: 1.2vw;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+.achievement-image {
+  flex: 0 0 25vw;
+  height: 20vw;
+  border-radius: 1.5vw;
+  overflow: hidden;
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(4vh);
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .achievement-card {
+    flex-direction: column !important;
+    width: 90vw;
+    text-align: center;
+  }
+  
+  .achievement-content h2 {
+    font-size: 4vw;
+  }
+  
+  .achievement-content p {
+    font-size: 2.5vw;
+  }
+  
+  .achievement-image {
+    flex: none;
+    width: 60vw;
+    height: 40vw;
+  }
+  
+  .achievements-title {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .achievements-section {
+    gap: 6vw;
+  }
+  
+  .achievement-card {
+    width: 95vw;
+    padding: 4vw;
+  }
+  
+  .achievement-content h2 {
+    font-size: 5vw;
+  }
+  
+  .achievement-content p {
+    font-size: 3vw;
+  }
+  
+  .achievement-image {
+    width: 70vw;
+    height: 45vw;
+  }
+  
+  .achievements-title {
+    font-size: 7vw;
+  }
+}

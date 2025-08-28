@@ -9,7 +9,7 @@ import { Upcoming } from './component/Upcoming';
 import Map from './component/Map';
 import Footer from "./component/Footer";
 import Team from "./component/Team"
-
+import Achievement from './component/Achievments';
 
 
 
@@ -24,6 +24,7 @@ export default function App() {
       <About />
       <Gallery />
       <Upcoming />
+      <Achievement />
       <Team />
       <Map />
       <Footer />

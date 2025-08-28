@@ -59,7 +59,7 @@ font-family: 'Satoshi-Regular';
 }
 .buttons{
 
-  width: 50%;
+  width: 65%;
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ProfJeena from '../assets/ProfJeenaJohn.jpg';
 //import Abdu from '../assets/Abdu-Convenor.jpg';
-import Sweda from '../assets/SWEDA-SECRETARY.jpg';
-import Rachel from '../assets/Rachel-Treasurer.jpg';
+
 import images from "../assets/Execom/index"
 import linkedin from '../assets/linkedin.svg';
 import './Team.css';
