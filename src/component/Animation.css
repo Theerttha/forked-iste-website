@@ -1,108 +1,140 @@
+/*Animation.css*/
 /*background animation*/
-.circles{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 85.5vw;
-    overflow: hidden;
+.achievements-section {
+  padding: 4vw 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+}
 
+.achievements-title {
+  color: var(--text-white);
+  font-size: 4vw;
+  font-family: 'Satoshi-Bold';
+  text-shadow: var(--primary-purple) 3px 1px 1px;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  max-width: 1000px;
+  background: var(--bg-overlay);
+  border-radius: 2vw;
+  padding: 2vw;
+  color: var(--text-white);
+  gap: 2vw;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-purple-collection);
+}
+
+.achievement-content {
+  flex: 1;
+  padding: 1vw;
+}
+
+.achievement-content h2 {
+  font-family: 'Satoshi-Bold';
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
+  text-shadow: var(--primary-purple) 2px 1px 1px;
+}
+
+.achievement-content p {
+  font-family: 'Satoshi-Regular';
+  font-size: 1.2vw;
+  line-height: 1.6;
+  color: var(--text-white-secondary);
+}
+
+.achievement-image {
+  flex: 0 0 25vw;
+  height: 20vw;
+  border-radius: 1.5vw;
+  overflow: hidden;
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(4vh);
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+/* Media Queries for Achievements */
+@media screen and (max-width: 768px) {
+  .achievement-card {
+    flex-direction: column !important;
+    width: 90vw;
+    text-align: center;
   }
   
-  .circles li{
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 2vw;
-    height: 2vw;
-    /* background: rgba(126, 126, 126, 0.2); */
-    /* background-image: linear-gradient(180deg,#fd2000,#df007c); */
-    /* background-image: linear-gradient(180deg,#ffffff,#cb0ebb); */
-    background-image: linear-gradient(180deg, rgb(209, 80, 232),#f8f8f8);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-    
+  .achievement-content h2 {
+    font-size: 4vw;
   }
   
-  .circles li:nth-child(1){
-    left: 25%;
-    width: 9vw;
-    height: 9vw;
-    animation-delay: 0s;
- 
+  .achievement-content p {
+    font-size: 2.5vw;
   }
   
-  
-  .circles li:nth-child(2){
-    left: 10%;
-    width: 8vw;
-    height: 8vw;
-    animation-delay: 2s;
-    animation-duration: 12s;
+  .achievement-image {
+    flex: none;
+    width: 60vw;
+    height: 40vw;
   }
   
-  .circles li:nth-child(3){
-    left: 70%;
-    width: 8vw;
-    height: 8vw;
-    animation-delay: 4s;
+  .achievements-title {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .achievements-section {
+    gap: 6vw;
   }
   
-  .circles li:nth-child(4){
-    left: 40%;
-    width: 5vw;
-    height: 5vw;
-    animation-delay: 0s;
-    animation-duration: 18s;
+  .achievement-card {
+    width: 95vw;
+    padding: 4vw;
   }
   
-  .circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 0s;
+  .achievement-content h2 {
+    font-size: 5vw;
   }
   
-  .circles li:nth-child(6){
-    left: 75%;
-    width: 14vw;
-    height: 14vw;
-    animation-delay: 3s;
+  .achievement-content p {
+    font-size: 3vw;
   }
   
-  .circles li:nth-child(7){
-    left: 35%;
-    width: 12vw;
-    height: 12vw;
-    animation-delay: 7s;
+  .achievement-image {
+    width: 70vw;
+    height: 45vw;
   }
   
-  .circles li:nth-child(8){
-    left: 50%;
-    width: 25px;
-    height: 25px;
-    animation-delay: 15s;
-    animation-duration: 45s;
+  .achievements-title {
+    font-size: 7vw;
   }
-  
-  .circles li:nth-child(9){
-    left: 20%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 2s;
-    animation-duration: 35s;
-  }
-  
-  .circles li:nth-child(10){
-    left: 85%;
-    width: 16vw;
-    height: 16vw;
-    animation-delay: 0s;
-    animation-duration: 11s;
-  }
-  
-  @media screen and (max-width:600px) {
-    .circles{
-      height:152.5vw;
-    }
-  }
+}

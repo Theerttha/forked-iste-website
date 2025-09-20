@@ -1,3 +1,4 @@
+/*Achievements.css*/
 .achievements-section {
   padding: 4vw 2vw;
   display: flex;
@@ -7,10 +8,10 @@
 }
 
 .achievements-title {
-  color: white;
+  color: var(--text-white);
   font-size: 4vw;
   font-family: 'Satoshi-Bold';
-  text-shadow: rgb(209, 80, 232) 3px 1px 1px;
+  text-shadow: var(--primary-purple) 3px 1px 1px;
   text-align: center;
   margin-bottom: 2vw;
 }
@@ -20,10 +21,10 @@
   align-items: center;
   width: 80vw;
   max-width: 1000px;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--bg-overlay);
   border-radius: 2vw;
   padding: 2vw;
-  color: white;
+  color: var(--text-white);
   gap: 2vw;
   transition: all 0.3s ease;
 }
@@ -34,10 +35,7 @@
 
 .achievement-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 1px 2px 0px rgba(225, 0, 255, 0.996),
-              1px 2px 4px 0px rgba(225, 0, 255, 0.996),
-              2px 4px 8px 0px rgba(0,255,255,0.7),
-              2px 4px 16px 0px rgba(225, 0, 255, 0.996);
+  box-shadow: var(--hover-purple-collection);
 }
 
 .achievement-content {
@@ -49,14 +47,14 @@
   font-family: 'Satoshi-Bold';
   font-size: 2.5vw;
   margin-bottom: 1vw;
-  text-shadow: rgb(209, 80, 232) 2px 1px 1px;
+  text-shadow: var(--primary-purple) 2px 1px 1px;
 }
 
 .achievement-content p {
   font-family: 'Satoshi-Regular';
   font-size: 1.2vw;
   line-height: 1.6;
-  color: #f1f1f1;
+  color: var(--text-white-secondary);
 }
 
 .achievement-image {
@@ -85,7 +83,7 @@
   visibility: visible;
 }
 
-/* Media Queries */
+/* Media Queries for Achievements */
 @media screen and (max-width: 768px) {
   .achievement-card {
     flex-direction: column !important;
