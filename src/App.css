@@ -22,20 +22,31 @@ overflow: hidden;
 /* app.css - Global Color Variables */
 
 :root {
-  /* Primary Brand Colors */
-  --primary-purple: rgb(209, 80, 232);
-  --primary-purple-dark: rgb(199, 4, 233);
-  --primary-purple-rgba: rgba(209, 80, 232, 0.996);
-  --primary-purple-light: rgba(225, 0, 255, 0.996);
-  --primary-purple-shadow: rgb(180, 2, 211);
+  /* BASE COLORS - Change these to update entire theme */
+  --primary-colour-1: #00a4c1;
+  --colour-2-bright: #d7d7d7;
 
-  /* Secondary Colors */
-  --cyan-bright: rgb(7, 226, 250);
-  --cyan-glow: rgba(0, 255, 255, 0.7);
-  --purple-dark: rgba(152, 13, 176, 0.996);
-  --purple-vibrant: rgb(122, 2, 138);
-  --purple-accent: rgb(161, 3, 182);
-  --cyan-accent: rgba(2, 216, 216, 0.7);
+  /* PRIMARY COLOR DERIVATIVES - All based on --primary-colour-1 */
+  --primary-colour-1-dark: color-mix(in srgb, var(--primary-colour-1) 85%, black);
+  --primary-colour-1-rgba: color-mix(in srgb, var(--primary-colour-1) 99.6%, transparent);
+  --primary-colour-1-light: color-mix(in srgb, var(--primary-colour-1) 90%, white);
+  --primary-colour-1-shadow: color-mix(in srgb, var(--primary-colour-1) 80%, black);
+
+  /* COLOR-1 VARIANTS - All based on --primary-colour-1 */
+  --colour-1-dark: color-mix(in srgb, var(--primary-colour-1) 70%, black);
+  --colour-1-vibrant: color-mix(in srgb, var(--primary-colour-1) 60%, black);
+  --colour-1-accent: color-mix(in srgb, var(--primary-colour-1) 75%, black);
+  --colour-1-team-card: color-mix(in srgb, var(--primary-colour-1) 70%, white);
+  --colour-1-team-light: color-mix(in srgb, var(--primary-colour-1) 80%, white);
+
+  /* SECONDARY COLOR DERIVATIVES - All based on --colour-2-bright */
+  --colour-2-glow: color-mix(in srgb, var(--colour-2-bright) 70%, transparent);
+  --colour-2-accent: color-mix(in srgb, var(--colour-2-bright) 70%, transparent);
+  --c2: color-mix(in srgb, var(--colour-2-bright) 20%, white);
+  --c2-alt: var(--colour-2-bright);
+
+  /* ANIMATION COLORS */
+  --c1: var(--colour-1-dark);
 
   /* Background Colors */
   --bg-black: rgb(0, 0, 0);
@@ -58,76 +69,69 @@ overflow: hidden;
 
   /* Border Colors */
   --border-light: rgb(220, 220, 220);
-  --border-purple: rgb(209, 80, 232);
+  --border-colour-1: var(--primary-colour-1);
   --border-white-opacity: rgba(255, 255, 255, 0.15);
   --border-white-low-opacity: rgba(255, 255, 255, 0.08);
   --border-white-very-low-opacity: rgba(255, 255, 255, 0.05);
-  --border-purple-light: rgba(167, 139, 250, 0.2);
-  --border-purple-medium: rgba(167, 139, 250, 0.4);
-  --border-purple-strong: rgba(167, 139, 250, 0.6);
-  --border-purple-dark: rgba(152, 13, 176, 0.3);
+  --border-colour-1-light: color-mix(in srgb, var(--primary-colour-1) 20%, transparent);
+  --border-colour-1-medium: color-mix(in srgb, var(--primary-colour-1) 40%, transparent);
+  --border-colour-1-strong: color-mix(in srgb, var(--primary-colour-1) 60%, transparent);
+  --border-colour-1-dark: color-mix(in srgb, var(--colour-1-dark) 30%, transparent);
 
   /* Gradient Colors */
-  --gradient-primary-start: rgb(209, 80, 232);
+  --gradient-primary-start: var(--primary-colour-1);
   --gradient-primary-end: #232323;
-  --gradient-white-start: rgb(209, 80, 232);
+  --gradient-white-start: var(--primary-colour-1);
   --gradient-white-end: #f8f8f8;
-  --gradient-blue-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-blue-colour-1: linear-gradient(135deg, var(--primary-colour-1) 0%, color-mix(in srgb, var(--primary-colour-1) 60%, black) 100%);
   --gradient-dark: linear-gradient(145deg, #1a1a1a, #0f0f0f);
   --gradient-content: linear-gradient(180deg, #1f1f1f, #171717);
   --gradient-card: linear-gradient(135deg, #3a3a3a, #2a2a2a);
   --gradient-card-hover: linear-gradient(135deg, #4a4a4a, #3a3a3a);
 
-  /* Shadow Colors */
-  --shadow-purple-glow: rgba(152, 13, 176, 0.5);
-  --shadow-purple-strong: rgba(152, 13, 176, 0.8);
-  --shadow-purple-light: rgba(152, 13, 176, 0.1);
-  --shadow-purple-medium: rgba(152, 13, 176, 0.2);
+  /* Shadow Colors - Based on primary color */
+  --shadow-colour-1-glow: color-mix(in srgb, var(--colour-1-dark) 50%, transparent);
+  --shadow-colour-1-strong: color-mix(in srgb, var(--colour-1-dark) 80%, transparent);
+  --shadow-colour-1-light: color-mix(in srgb, var(--colour-1-dark) 10%, transparent);
+  --shadow-colour-1-medium: color-mix(in srgb, var(--colour-1-dark) 20%, transparent);
   --shadow-black-light: rgba(0, 0, 0, 0.2);
   --shadow-black-medium: rgba(0, 0, 0, 0.4);
   --shadow-black-strong: rgba(0, 0, 0, 0.5);
   --shadow-black-heavy: rgba(0, 0, 0, 0.7);
 
-  /* Animation Colors for Conic Gradients */
-  --c1: rgba(152, 13, 176, 0.996);
-  --c2: rgb(234, 243, 244);
-  --c2-alt: rgb(7, 226, 250);
-
   /* Animation Properties */
   --d: 2500ms;
   --angle: 90deg;
 
-  /* Hover Effect Colors */
-  --hover-purple-collection: 0px 1px 2px 0px rgba(225, 0, 255, 0.996),
-                            1px 2px 4px 0px rgba(225, 0, 255, 0.996),
-                            2px 4px 8px 0px rgba(0,255,255,0.7),
-                            2px 4px 16px 0px rgba(225, 0, 255, 0.996);
+  /* Hover Effect Colors - Based on primary and secondary colors */
+  --hover-colour-1-collection: 
+    0px 1px 2px 0px color-mix(in srgb, var(--primary-colour-1) 90%, white),
+    1px 2px 4px 0px color-mix(in srgb, var(--primary-colour-1) 90%, white),
+    2px 4px 8px 0px var(--colour-2-glow),
+    2px 4px 16px 0px color-mix(in srgb, var(--primary-colour-1) 90%, white);
   
-  --hover-purple-simple: 0px 1px 2px 0px rgba(225, 0, 255, 0.996),
-                        1px 2px 4px 0px rgba(225, 0, 255, 0.996),
-                        2px 4px 8px 0px rgba(0,255,255,0.7),
-                        2px 4px 6px 0px rgba(225, 0, 255, 0.996);
+  --hover-colour-1-simple: 
+    0px 1px 2px 0px color-mix(in srgb, var(--primary-colour-1) 90%, white),
+    1px 2px 4px 0px color-mix(in srgb, var(--primary-colour-1) 90%, white),
+    2px 4px 8px 0px var(--colour-2-glow),
+    2px 4px 6px 0px color-mix(in srgb, var(--primary-colour-1) 90%, white);
 
-  /* Specialized Colors */
-  --purple-team-card: #a78bfa;
-  --purple-team-light: #c4b5fd;
+  /* Specialized Colors - Team section based on primary color */
   --background-team-overlay: rgba(20, 20, 30, 0.95);
-  --background-team-active: rgba(167, 139, 250, 0.15);
-  --background-team-hover: rgba(167, 139, 250, 0.1);
+  --background-team-active: color-mix(in srgb, var(--colour-1-team-card) 15%, transparent);
+  --background-team-hover: color-mix(in srgb, var(--colour-1-team-card) 10%, transparent);
   --background-team-subcategory: rgba(255, 255, 255, 0.02);
   
   /* Navigation Colors */
-  --nav-bg: rgb(34, 33, 33);
+  --nav-bg: var(--bg-dark-primary);
   --nav-toggle-bg: #1e1e1f;
 
-  /* Form Colors */
-  --form-button-bg: rgb(209, 80, 232);
-  --form-button-hover: rgb(199, 4, 233);
+  /* Form Colors - Based on primary color */
+  --form-button-bg: var(--primary-colour-1);
+  --form-button-hover: var(--primary-colour-1-dark);
 
   /* Footer Colors */
-  --footer-bg: rgb(65, 63, 63);
+  --footer-bg: var(--bg-dark-tertiary);
 }
-
-
 
 

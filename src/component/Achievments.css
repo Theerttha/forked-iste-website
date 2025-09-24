@@ -11,7 +11,7 @@
   color: var(--text-white);
   font-size: 4vw;
   font-family: 'Satoshi-Bold';
-  text-shadow: var(--primary-purple) 3px 1px 1px;
+  text-shadow: var(--primary-colour-1) 3px 1px 1px;
   text-align: center;
   margin-bottom: 2vw;
 }
@@ -35,7 +35,7 @@
 
 .achievement-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--hover-purple-collection);
+  box-shadow: var(--hover-colour-1-collection);
 }
 
 .achievement-content {
@@ -47,7 +47,7 @@
   font-family: 'Satoshi-Bold';
   font-size: 2.5vw;
   margin-bottom: 1vw;
-  text-shadow: var(--primary-purple) 2px 1px 1px;
+  text-shadow: var(--primary-colour-1) 2px 1px 1px;
 }
 
 .achievement-content p {

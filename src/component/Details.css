@@ -27,19 +27,19 @@
 
 .vision:hover{
   transform: translateY(-5px);
-  box-shadow: var(--hover-purple-collection);
+  box-shadow: var(--hover-colour-1-collection);
   transition: .1s ease-in-out;
 }
 
 .mission:hover{
   transform: translateY(-5px);
-  box-shadow: var(--hover-purple-collection);
+  box-shadow: var(--hover-colour-1-collection);
   transition: .1s ease-in-out;
 }
 
 .announcement:hover{
   transform: translateY(-5px);
-  box-shadow: var(--hover-purple-collection);
+  box-shadow: var(--hover-colour-1-collection);
   transition: .1s ease-in-out;
 }
 
@@ -79,15 +79,15 @@
 }
 
 .vision h1{
-  text-shadow: var(--primary-purple) 3px 1px 1px;
+  text-shadow: var(--primary-colour-1) 3px 1px 1px;
 }
 
 .mission h1{
-  text-shadow: var(--primary-purple) 3px 1px 1px;
+  text-shadow: var(--primary-colour-1) 3px 1px 1px;
 }
 
 .announcement h1{
-  text-shadow: var(--primary-purple) 3px 1px 1px;
+  text-shadow: var(--primary-colour-1) 3px 1px 1px;
 }
 
 @media screen and (min-width:768px) {
@@ -114,19 +114,19 @@
   
   .vision{
     width: 75vw;
-    box-shadow: var(--hover-purple-simple);
+    box-shadow: var(--hover-colour-1-simple);
   }
   
   .mission{
     margin-top: 4vw;
     width: 75vw;
-    box-shadow: var(--hover-purple-simple);
+    box-shadow: var(--hover-colour-1-simple);
   }
   
   .announcement{
     margin-top: 4vw;
     width: 75vw;
-    box-shadow: var(--hover-purple-simple);
+    box-shadow: var(--hover-colour-1-simple);
   }
   
   .Details h1{

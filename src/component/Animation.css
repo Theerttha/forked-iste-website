@@ -1,140 +1,116 @@
 /*Animation.css*/
 /*background animation*/
-.achievements-section {
-  padding: 4vw 2vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4vw;
-}
-
-.achievements-title {
-  color: var(--text-white);
-  font-size: 4vw;
-  font-family: 'Satoshi-Bold';
-  text-shadow: var(--primary-purple) 3px 1px 1px;
-  text-align: center;
-  margin-bottom: 2vw;
-}
-
-.achievement-card {
-  display: flex;
-  align-items: center;
-  width: 80vw;
-  max-width: 1000px;
-  background: var(--bg-overlay);
-  border-radius: 2vw;
-  padding: 2vw;
-  color: var(--text-white);
-  gap: 2vw;
-  transition: all 0.3s ease;
-}
-
-.achievement-card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.achievement-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--hover-purple-collection);
-}
-
-.achievement-content {
-  flex: 1;
-  padding: 1vw;
-}
-
-.achievement-content h2 {
-  font-family: 'Satoshi-Bold';
-  font-size: 2.5vw;
-  margin-bottom: 1vw;
-  text-shadow: var(--primary-purple) 2px 1px 1px;
-}
-
-.achievement-content p {
-  font-family: 'Satoshi-Regular';
-  font-size: 1.2vw;
-  line-height: 1.6;
-  color: var(--text-white-secondary);
-}
-
-.achievement-image {
-  flex: 0 0 25vw;
-  height: 20vw;
-  border-radius: 1.5vw;
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 85.5vw;
   overflow: hidden;
 }
 
-.achievement-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 2vw;
+  height: 2vw;
+  background-image: linear-gradient(180deg, var(--gradient-primary-start), var(--text-white-tertiary));
+  animation: animate 25s linear infinite;
+  bottom: -150px;
 }
 
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(4vh);
-  visibility: hidden;
-  transition: opacity 1s ease-out, transform 2s ease-out;
+.circles li:nth-child(1){
+  left: 25%;
+  width: 9vw;
+  height: 9vw;
+  animation-delay: 0s;
 }
 
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
+.circles li:nth-child(2){
+  left: 10%;
+  width: 8vw;
+  height: 8vw;
+  animation-delay: 2s;
+  animation-duration: 12s;
 }
 
-/* Media Queries for Achievements */
-@media screen and (max-width: 768px) {
-  .achievement-card {
-    flex-direction: column !important;
-    width: 90vw;
-    text-align: center;
-  }
-  
-  .achievement-content h2 {
-    font-size: 4vw;
-  }
-  
-  .achievement-content p {
-    font-size: 2.5vw;
-  }
-  
-  .achievement-image {
-    flex: none;
-    width: 60vw;
-    height: 40vw;
-  }
-  
-  .achievements-title {
-    font-size: 6vw;
+.circles li:nth-child(3){
+  left: 70%;
+  width: 8vw;
+  height: 8vw;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 5vw;
+  height: 5vw;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 14vw;
+  height: 14vw;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 12vw;
+  height: 12vw;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 16vw;
+  height: 16vw;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@media screen and (max-width:600px) {
+  .circles{
+    height:152.5vw;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .achievements-section {
-    gap: 6vw;
+@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
   }
-  
-  .achievement-card {
-    width: 95vw;
-    padding: 4vw;
-  }
-  
-  .achievement-content h2 {
-    font-size: 5vw;
-  }
-  
-  .achievement-content p {
-    font-size: 3vw;
-  }
-  
-  .achievement-image {
-    width: 70vw;
-    height: 45vw;
-  }
-  
-  .achievements-title {
-    font-size: 7vw;
+
+  100%{
+      transform: translateY(-100vh) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
   }
 }

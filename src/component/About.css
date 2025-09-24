@@ -42,7 +42,7 @@
 .col1 h1{
     font-family: 'Satoshi-Bold';
     text-align:'center';
-    text-shadow: var(--primary-purple) .2vw .1vw 0.1vw;
+    text-shadow: var(--primary-colour-1) .2vw .1vw 0.1vw;
     letter-spacing: 0.4vw;
     font-size: 3vw;
 }
@@ -79,7 +79,7 @@
 .col4 h1{
     font-family: 'Satoshi-Bold';
     text-align:'center';
-    text-shadow: var(--primary-purple) .2vw .1vw 0.1vw;
+    text-shadow: var(--primary-colour-1) .2vw .1vw 0.1vw;
     letter-spacing: 0.4vw;
     font-size: 3vw;
 }
@@ -224,7 +224,7 @@
     --angle: 90deg;
     --gradX: 100%;
     --gradY: 50%;
-    --c1: var(--purple-dark);
+    --c1: var(--colour-1-dark);
     --c2: var(--c2-alt);
 }
 

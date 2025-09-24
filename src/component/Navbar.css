@@ -67,14 +67,14 @@ nav{
 
 .nueva{
   font-weight: 600;
-  color: var(--primary-purple);
+  color: var(--primary-colour-1);
 }
 
 .but:hover{
   font-weight: 600;
-  color: var(--primary-purple);
+  color: var(--primary-colour-1);
   transform: translateY(-5px);
-  box-shadow: var(--hover-purple-collection);
+  box-shadow: var(--hover-colour-1-collection);
   transition: .1s ease-in-out;
 }
 
@@ -86,9 +86,9 @@ nav{
 
 @media only screen and (max-width: 600px) {
   .but{
-    box-shadow: 2px 2px 2px 2px var(--purple-vibrant),
-    2px 1px 6px 1px var(--purple-accent),
-    2px 4px 8px 0px var(--cyan-accent);
+    box-shadow: 2px 2px 2px 2px var(--colour-1-vibrant),
+    2px 1px 6px 1px var(--colour-1-accent),
+    2px 4px 8px 0px var(--colour-2-accent);
   }
   
   .buttons{

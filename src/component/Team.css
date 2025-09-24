@@ -54,7 +54,7 @@
 }
 
 .filter-button {
-  background: var(--gradient-blue-purple);
+  background: var(--gradient-blue-colour-1);
   border: none;
   padding: 12px 24px;
   border-radius: 25px;
@@ -119,12 +119,12 @@
 .filter-option:hover {
   background: rgba(102, 126, 234, 0.15);
   padding-left: 28px;
-  color: var(--purple-team-card);
+  color: var(--colour-1-team-card);
 }
 
 .filter-option.active {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
-  color: var(--purple-team-light);
+  color: var(--colour-1-team-light);
   font-weight: 600;
 }
 
@@ -132,7 +132,7 @@
   content: '●';
   position: absolute;
   left: 12px;
-  color: var(--purple-team-card);
+  color: var(--colour-1-team-card);
   font-size: 12px;
 }
 
@@ -151,15 +151,15 @@
 
 .filter-subcategory:hover {
   background: var(--background-team-hover);
-  color: var(--purple-team-light);
-  border-left-color: var(--purple-team-card);
+  color: var(--colour-1-team-light);
+  border-left-color: var(--colour-1-team-card);
   padding-left: 44px;
 }
 
 .filter-subcategory.active {
   background: var(--background-team-active);
-  color: var(--purple-team-light);
-  border-left-color: var(--purple-team-card);
+  color: var(--colour-1-team-light);
+  border-left-color: var(--colour-1-team-card);
   font-weight: 500;
 }
 
@@ -167,7 +167,7 @@
   content: '→';
   position: absolute;
   left: 24px;
-  color: var(--purple-team-card);
+  color: var(--colour-1-team-card);
   font-size: 10px;
 }
 
@@ -245,7 +245,7 @@
   font-family: 'Satoshi-Bold';
   color: var(--text-white);
   font-size: 25px;
-  text-shadow: var(--primary-purple) .2vw .1vw .1vw;
+  text-shadow: var(--primary-colour-1) .2vw .1vw .1vw;
   text-align: center;
 }
 
@@ -255,10 +255,10 @@ max-width: 280px;
 margin: 2rem auto;
 background: var(--gradient-dark);
 border-radius: 20px;
-border: 1px solid var(--border-purple-light);
+border: 1px solid var(--border-colour-1-light);
 box-shadow: 
   0 4px 20px var(--shadow-black-medium),
-  0 2px 8px var(--shadow-purple-light),
+  0 2px 8px var(--shadow-colour-1-light),
   inset 0 1px 0 var(--border-white-very-low-opacity);
 overflow: hidden;
 transition: all 0.3s ease;
@@ -267,10 +267,10 @@ position: relative;
 
 .memberCard:hover {
 transform: translateY(-5px);
-border-color: var(--border-purple-medium);
+border-color: var(--border-colour-1-medium);
 box-shadow: 
   0 8px 30px rgba(0, 0, 0, 0.6),
-  0 4px 15px var(--shadow-purple-medium),
+  0 4px 15px var(--shadow-colour-1-medium),
   inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
@@ -290,7 +290,7 @@ height: 100%;
 object-fit: cover;
 border-radius: 15px;
 transition: transform 0.3s ease;
-border: 2px solid var(--border-purple-dark);
+border: 2px solid var(--border-colour-1-dark);
 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -308,7 +308,7 @@ background: linear-gradient(
   to bottom,
   transparent 50%,
   var(--bg-overlay-medium) 90%,
-  var(--shadow-purple-light) 100%
+  var(--shadow-colour-1-light) 100%
 );
 border-radius: 15px;
 pointer-events: none;
@@ -340,7 +340,7 @@ justify-content: center;
 width: 40px;
 height: 40px;
 background: var(--gradient-card);
-border: 1px solid var(--border-purple-dark);
+border: 1px solid var(--border-colour-1-dark);
 border-radius: 50%;
 transition: all 0.3s ease;
 text-decoration: none;
@@ -351,7 +351,7 @@ box-shadow:
 
 .linkedinLink:hover {
 transform: translateY(-2px);
-border-color: var(--border-purple-strong);
+border-color: var(--border-colour-1-strong);
 background: var(--gradient-card-hover);
 box-shadow: 
   0 4px 15px rgba(0, 0, 0, 0.6),
@@ -369,7 +369,7 @@ transition: opacity 0.3s ease;
 
 .linkedinLink:hover .linkedinIcon {
 opacity: 1;
-filter: brightness(0) invert(1) drop-shadow(0 0 2px var(--shadow-purple-glow));
+filter: brightness(0) invert(1) drop-shadow(0 0 2px var(--shadow-colour-1-glow));
 }
 
 /* Responsive grid classes */
@@ -476,7 +476,7 @@ filter: brightness(0) invert(1) drop-shadow(0 0 2px var(--shadow-purple-glow));
 
   .subHead {
       font-size: 20px;
-      text-shadow: var(--primary-purple) .4vw .2vw .2vw;
+      text-shadow: var(--primary-colour-1) .4vw .2vw .2vw;
   }
 
   .name {
