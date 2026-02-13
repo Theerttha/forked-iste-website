@@ -8,12 +8,18 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
+      title: "NEXORA Champions",
+      content: "Champions of 24th annual state students'convention of kerala section held at MBCET",
+      image: "./"
+    },
+    {
+      id: 2,
       title: "IGNIFEX Champions",
       content: "Champions of 23rd annual state students'convention of kerala section held at GEC Kozhikode",
       image:Ignifex // Replace with your image path
     },
     {
-      id: 2,
+      id: 3,
       title: "ATHENA Champions",
       content: "Champions of 22nd annual state students'convention of kerala section held at TKM",
       image: "./" // Replace with your image path

@@ -7,14 +7,63 @@ import design_and_define from '../assets/design_and_define.jpeg'
 import grab_the_job from '../assets/grab_the_job.jpeg'
 import circuitry from '../assets/circuitry.jpeg'
 import launchpad from '../assets/launchpad.jpeg'
+import kranthi_2025 from "../assets/2025_Events/Kranthi_2025.png"
 // import photoshop from '../assets/photoshop.jpeg'
 // import posterdesigning from '../assets/posterdesigning.jpeg'
 import discussion from '../assets/discussion.jpeg'
+import techtober from "../assets/2025_Events/Techtober.png"
+import stranger_things from "../assets/2025_Events/Stranger Designs.png"
+import black_box from "../assets/2025_Events/Project_Black_Box.jpg"
+import hack_the_frontend from "../assets/2025_Events/frontEnd-4.png"
+import locke_and_key from "../assets/2025_Events/Locke_and_key.jpg"
  const content=[
+  {
+      image:locke_and_key,
+      title:"LOCKE & KEY",
+      content:"",
+      date:"15-01-2026",
+      state:"offline"
+    },
+  {
+      image:hack_the_frontend,
+      title:"HACK THE FRONTEND",
+      content:"The CSE Forum organized a web development workshop focused on building frontend applications using vibecoding. The workshop introduced participants to modern frontend development practices and provided hands-on experience in designing interactive and responsive user interfaces",
+      date:"15-01-2026",
+      state:"offline"
+    },
+  
+  {
+      image:black_box,
+      title:"PROJECT BLACK BOX",
+      content:"A Reverse Coding Competition was conducted to test participants’ analytical and programming skills.The event encouraged logical thinking, problem-solving ability, and a strong understanding of programming concepts",
+      date:"13-01-2026",
+      state:"offline"
+    },
+  {
+      image:stranger_things,
+      title:"STRANGER DESIGNS",
+      content:"",
+      date:"11-01-2026",
+      state:"offline"
+    },
+    {
+      image:techtober,
+      title:"TECHTOBER",
+      content:"A themed drawing competition was to encourage participants to express their creativity and imagination. Participants were asked to create artwork based on a given theme, allowing them to present their ideas through visual storytelling",
+      date:"",
+      state:"offline"
+    },
+    {
+      image:kranthi_2025,
+      title:"KRANTHI",
+      content:"The ISTE GECT Students’ Chapter successfully organized KRANTHI, a mini online technical fest that brought together innovation, creativity, and technical excellence. The fest featured a wide range of competitions and workshops spanning multiple engineering departments, encouraging students to showcase their knowledge and practical skills.",
+      date:"04/08/2025-01/09/2025",
+      state:"offline and online"
+    },
     { 
       image:kranthi,
       title:"KRANTHI",
-      content:" ISTE GECT Students’ Chapter conducted KRANTHI, a mini online tech fest .The event had a college wide series of technical events workshops,competition from every domain of engineering.The competition was high with more than 300 participants from various departments.",
+      content:"ISTE GECT Students’ Chapter conducted KRANTHI, a mini online tech fest .The event had a college wide series of technical events workshops,competition from every domain of engineering.The competition was high with more than 300 participants from various departments.",
       date:"24/07/2022-29/07/2022",
       state:"offline"
     },
