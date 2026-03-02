@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ProfJeena from '../assets/ProfJeenaJohn.jpg';
 //import Abdu from '../assets/Abdu-Convenor.jpg';
 
-import images from "../assets/Execom/index"
+import images from "../assets/2025_Execom/index"
 import linkedin from '../assets/linkedin.svg';
 import './Team.css';
 
@@ -27,7 +27,7 @@ const teamData = {
       id: 3,
       name: 'Krishna S',
       role: 'Secretary',
-      image: images.Diya_S_Nair_Joint_Secretary,
+      image: images.Krishna_S_Secretary_,
       linkedin: 'https://www.linkedin.com/in/sweda-dinesh-9b354b21b/'
     },
     {
@@ -72,7 +72,7 @@ const teamData = {
       id: 41,
       name: 'Gouri Kalyani S',
       role: 'Joint Treasurer',
-      image: images.Diya_S_Nair_Joint_Secretary,
+      image: images.Gouri_Kalyani_S_Joint_Treasurer,
       linkedin: 'https://www.linkedin.com/in/rachel-babu-9a9909247/'
     },
     {
@@ -141,7 +141,7 @@ const teamData = {
     {
       id: 51,
       name: 'Anjana Madhu',
-      image: images.Diya_S_Nair_Joint_Secretary,
+      image: images.Anjana_Madhu_Executive_Committee,
       linkedin: ''
     },
     {
@@ -226,7 +226,7 @@ const teamData = {
       id: 13,
       name: 'K Nagesh Kannoth',
       role: 'Head',
-      image: images.Diya_S_Nair_Joint_Secretary,
+      image: images.Nagesh_head,
       linkedin: ''
     },
     {
@@ -340,7 +340,7 @@ const teamData = {
       id: 28,
       name: 'Akash M Vijay',
       role: 'Technical co lead',
-      image: images.Diya_S_Nair_Joint_Secretary,
+      image: images.Akash_M_Vijay_Technichal_Co_lead,
       linkedin: ''
     }
 
@@ -371,7 +371,7 @@ const teamData = {
       id: 32,
       name: 'Zahan P P',
       role: 'Technical co lead',
-      image: images.Diya_S_Nair_Joint_Secretary,
+      image: images.Zahan_tech_co_lead,
       linkedin: ''
     }
 
@@ -454,7 +454,7 @@ const teamData = {
     {
       id: 61,
       name: 'Swetha K Nambiar',
-      image: images.Diya_S_Nair_Joint_Secretary,
+      image: images.Swetha_Arch,
       linkedin: ''
     },
     {
@@ -527,7 +527,7 @@ const categoryStructure = [
   },
   { 
     type: 'sub', 
-    key: 'Productiom', 
+    key: 'Production', 
     label: 'Production' 
   },
   {

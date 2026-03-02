@@ -2,10 +2,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const execomDir = path.join(__dirname, 'src', 'assets', 'Execom');
+const execomDir = path.join(__dirname, 'src', 'assets', '2025_Execom');
 const outputFile = path.join(execomDir, 'index.js');
 
-const supported = /\.(png|jpe?g|svg|webp|gif)$/i;
+const supported = /\.(png|jpe?g|svg|webp|gif|heic)$/i;
 
 const files = fs.readdirSync(execomDir).filter(f => supported.test(f));
 
