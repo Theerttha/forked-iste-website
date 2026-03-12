@@ -20,7 +20,7 @@ import locke_and_key from "../assets/2025_Events/Locke_and_key.jpg"
   {
       image:locke_and_key,
       title:"LOCKE & KEY",
-      content:"",
+      content:"The Department of Chemical Engineering organized Locke and Key, an engaging quiz competition designed to test participants’ knowledge and analytical thinking. The event brought together students from various disciplines to compete in multiple rounds covering science, technology, and general knowledge.",
       date:"15-01-2026",
       state:"offline"
     },
@@ -42,7 +42,7 @@ import locke_and_key from "../assets/2025_Events/Locke_and_key.jpg"
   {
       image:stranger_things,
       title:"STRANGER DESIGNS",
-      content:"",
+      content:"The Department of Electronics and Communication Engineering organized Stranger Designs, a creative poster-making competition aimed at encouraging artistic expression and innovative thinking among students.",
       date:"11-01-2026",
       state:"offline"
     },
@@ -50,7 +50,7 @@ import locke_and_key from "../assets/2025_Events/Locke_and_key.jpg"
       image:techtober,
       title:"TECHTOBER",
       content:"A themed drawing competition was to encourage participants to express their creativity and imagination. Participants were asked to create artwork based on a given theme, allowing them to present their ideas through visual storytelling",
-      date:"",
+      date:"12-10-205",
       state:"offline"
     },
     {
